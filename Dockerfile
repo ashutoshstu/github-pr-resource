@@ -2,7 +2,7 @@ FROM golang:1.14 as builder
 ADD . /go/src/github.com/telia-oss/github-pr-resource
 WORKDIR /go/src/github.com/telia-oss/github-pr-resource
 RUN curl -sL https://taskfile.dev/install.sh | sh
-RUN ./bin/task build
+#RUN ./bin/task build
 
 FROM alpine:3.11 as resource
 COPY --from=builder /go/src/github.com/telia-oss/github-pr-resource/build /opt/resource
