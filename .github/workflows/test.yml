@@ -37,6 +37,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: abhishek138/pr_image:latest      
+          tags: abhishek138/pr_image:latest
+  
     
 
